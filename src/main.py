@@ -6,6 +6,7 @@ dotenv.load_dotenv()
 
 from gpt_handler import *
 from spotify_handler import *
+from inquiries import *
 
 
 
@@ -24,7 +25,7 @@ def main():
     _ = inquirer.prompt(main_promt)
 
     if _['choices'] == 'Simple (Bands)':
-        print("simple")
+        promt_bands()
 
     if _['choices'] == 'Advanced (Mood, adjectives...)':
         print("advanced")
